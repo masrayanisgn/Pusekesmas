@@ -16,9 +16,9 @@
                             @endforeach
                         </ul>
                     </div>
-                @endif
+              @endif
 
-                <form action="/pasien" method="post" class="mx-2">
+                <form action="/dokter" method="post" class="mx-2">
                     <div class="form-group mt-3">
                         @csrf
                         <label for="nama">Nama</label>
