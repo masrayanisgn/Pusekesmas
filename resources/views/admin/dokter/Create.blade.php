@@ -5,7 +5,7 @@
         <br>
         <a href="/dokter" class="\btn btn-primary">
             < Back</a>
-                <hr>
+    
 
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -26,15 +26,20 @@
                     </div>
 
                     <div class="form-group mt-3">
-                        <label for="jk">Jenis Kelamin</label>
-                        <select class="form-control" name="jk">
-                            <option value="L">Laki-laki</option>
-                            <option value="P">Perempuan</option>
+                        <label for="jk">spesialis</label>
+                        <select class="form-control" name="spesialis">
+                            <option value="jantung">Jantung</option>
+                            <option value="gigi">gigi</option>
+                            <option value="kandungan">kandungan</option>
+                            <option value="mata">mata</option>
+                            <option value="hati">hati</option>
                         </select>
                     </div>
 
+                    
+                    
                     <div class="form-group mt-3">
-                        <label for="tgl_lahir">sp</label>
+                        <label for="tgl_lahir">Tanggal Lahir</label>
                         <input type="date" class="form-control" name="tgl_lahir" value="">
                     </div>
 

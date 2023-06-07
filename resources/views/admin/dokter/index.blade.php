@@ -16,8 +16,8 @@
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
-                    <th>Jenis Kelamin</th>
-                    <th>sp</th>
+                    <th>spesialis</th>
+                    <th>tgl_lahir</th>
                     <th>Alamat</th>
                     <th>No.Telp</th>
                     <th>Aksi</th>
@@ -29,8 +29,8 @@
                     <tr>
                         <td>{{ $iteration++ }}</td>
                         <td>{{ $item['nama'] }}</td>
-                        <td>{{ $item['JK'] }}</td>
-                        <td>{{ $item['sp'] }}</td>
+                        <td>{{ $item['spesialis'] }}</td>
+                        <td>{{ $item['tgl_lahir'] }}</td>
                         <td>{{ $item['alamat'] }}</td>
                         <td>{{ $item['telp'] }}</td>
                         <td>

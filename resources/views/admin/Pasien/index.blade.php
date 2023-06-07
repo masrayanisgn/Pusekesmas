@@ -29,8 +29,15 @@
                     <tr>
                         <td>{{ $iteration++ }}</td>
                         <td>{{ $item['nama'] }}</td>
-                        <td>{{ $item['JK'] }}</td>
-                        <td>{{ $item['tgl_Lahir'] }}</td>
+                        <td>
+                            @if($item['jk'] =='l')
+                                laki-laki
+                             @else
+                                Perempuan
+                                @endif
+                        
+                        </td>
+                        <td>{{ $item['tgl_lahir'] }}</td>
                         <td>{{ $item['alamat'] }}</td>
                         <td>{{ $item['telp'] }}</td>
                         <td>
