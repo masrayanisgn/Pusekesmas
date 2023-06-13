@@ -2,7 +2,9 @@
 
 use App\http\Controllers\DokterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PasienController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Route untuk menampilkan dashboard admin
-Route::get('/', [DashboardController::class,'index']);
+Route::get('/', [DashboardController::class,'index'])->middleware('auth');
 
 // Route untuk menampilkan daftar pasien 
 Route::get('/pasien', [PasienController::class, 'index']);
@@ -47,3 +49,16 @@ Route::put('/pasien/{id}', [PasienController::class, 'update']);
 
 // Route untuk hapus pasien
 Route::delete('/pasien', [PasienController::class, 'destroy']);
+
+// Route untuk menampilkan form edit dokter
+Route::get('/dokter/edit/{id}', [DokterController::class, 'edit']);
+
+// Route untuk memproses form edit dokter
+Route::put('/dokter/{id}', [DokterController::class, 'update']);
+
+// Route untuk hapus dokter
+Route::delete('/dokter', [DokterController::class, 'destroy']);
+
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index']);
