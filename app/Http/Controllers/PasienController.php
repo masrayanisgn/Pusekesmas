@@ -32,6 +32,7 @@ class PasienController extends Controller{
         ]);
         // insert data ke table pasiens
         Pasien::create([
+            // field di table =>nilai yang ingin di isi
             'nama' => $request->nama,
             'jk' => $request->jk,
             'tgl_lahir' =>$request->tgl_lahir,

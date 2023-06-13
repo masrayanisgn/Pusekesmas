@@ -25,6 +25,7 @@ class DokterController extends Controller
         $request->validate([
             'nama' => 'required | min:3' ,
             'spesialis' => 'required | min:2',
+            'tgl_lahir' => 'required | date |',
             'telp' => 'required | numeric | digits_between:10,14',
             'alamat' => 'required | max:500',
            
@@ -36,6 +37,7 @@ class DokterController extends Controller
         // field di table => nilai yang ingin diisi
         'nama' =>$request->nama,
         'spesialis' =>$request->spesialis,
+        'tgl_lahir' =>$request->tgl_lahir,
         'telp' =>$request->telp,
         'alamat' =>$request->alamat,
 
@@ -58,6 +60,7 @@ public function update($id, Request $request){
     $validatedData = $request->validate([
         'nama' => 'required | min:3' ,
         'spesialis' => 'required | min:2',
+        'tgl_lahir' => 'required | date |',
         'telp' => 'required | numeric | digits_between:10,14',
         'alamat' => 'required | max:500',
     ]);
