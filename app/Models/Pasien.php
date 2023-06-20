@@ -12,5 +12,12 @@ class Pasien extends Model
      public $table ='pasiens';
 
      // menyebutkan field yang boleh diisi.
-     protected $fillable =['nama','spesialis', 'tgl_lahir','alamat','telp'];
+     protected $fillable =['nama','spesialis', 'tgl_lahir','alamat','telp', 'dokter_id'];
+
+     // menghubungkan pasien ke model dokter
+     public function dokter(){
+        // karena status model saat ini adalah yang dititipkan id, 
+        // maka dapat menggunakan belongsTo atau belongsToMany
+        return $this->belongsTo(Dokter::class);
+     }
  }
