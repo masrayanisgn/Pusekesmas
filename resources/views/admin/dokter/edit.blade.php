@@ -1,7 +1,7 @@
 @extends('main')
 @section('content')
 
-    <h1 class="text-center">Tambah Dokter</h1>
+    <h1 class="text-center">Edit Dokter</h1>
     <br>
     <a href="/dokter/{{ $dokter->id }}" class="btn btn-primary">
         < Back</a>
